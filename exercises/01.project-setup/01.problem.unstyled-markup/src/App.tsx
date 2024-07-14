@@ -1,3 +1,6 @@
+import { EpicStackLogo } from "./logos/epic-stack";
+import { logos } from "./logos/logos";
+
 export default function App() {
 	return (
 		<>
@@ -5,20 +8,31 @@ export default function App() {
 			{/*
 				 🐨 1. Import the { EpicStackLogo } from the './logos/logos.tsx' file. Render it with a width and height of level 20
 			*/}
-
+			<a href="#">
+				<EpicStackLogo className="size-20" />
+			</a>
 			{/* 
 				💰 You can use the 'size-*' utilities to set an 
 				equal width and height in a single class! 
 			*/}
 
 			{/* 🐨 2. Add an `h1` tag that says "The Epic Stack" */}
-
+			<h1>The Epic Stack</h1>
 			{/* 
 				🐨 3. Add a paragraph that says: 
 				"Check the Getting Started guide file for how to get your project off the ground!"
 				The "Getting Started" should be a link. Set the href to "#".
 			*/}
-
+			<p>Check the <a href="#">Getting Started</a> guide file for how to get your project off the ground!</p>
+			<ul>
+				{logos.map((logo) => (
+					<li key={logo.href}>
+						<a href={logo.href}>
+							<img src={logo.src} alt={logo.alt} className="w-16" />
+						</a>
+					</li>
+				))}
+			</ul>
 			{/* 
 				🐨 4. Import the { logos } from the './logos/logos.tsx' file.
 
