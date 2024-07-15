@@ -8,7 +8,7 @@ export default function App() {
 				🐨 Wrap the word "Epic" in a span, and set its text color
 				to "highlight", to verify our new color works.
 			*/}
-			<h1>The Epic Stack</h1>
+			<h1>The <span className='text-highlight'>Epic</span> Stack</h1>
 			<p>
 				Check the <a href="#">Getting Started</a> guide file for how to get your
 				project off the ground!
